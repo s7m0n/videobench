@@ -23,6 +23,7 @@ RUN \
         python3-tk \
         yasm \
         pkg-config \
+	libdav1d-dev \
         && \
         apt-get clean && \
         rm -rf /var/lib/apt/lists
@@ -50,7 +51,7 @@ RUN \
         mkdir /tmp/ffmpeg \
         && cd /tmp/ffmpeg \
         && git clone https://git.ffmpeg.org/ffmpeg.git . \
-        && ./configure --enable-libvmaf --enable-version3 --pkg-config-flags="--static" \
+        && ./configure --enable-libdav1d --enable-libvmaf --enable-version3 --pkg-config-flags="--static" \
         && make -j 8 install \
         && rm -r /tmp/ffmpeg
 
