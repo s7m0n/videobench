@@ -21,6 +21,7 @@ RUN \
         python3-setuptools \
         python3-wheel \
         python3-tk \
+	python3-venv \
         yasm \
         pkg-config \
 	libdav1d-dev \
